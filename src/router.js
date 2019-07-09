@@ -12,7 +12,7 @@ import HeroAdd from './views/hero/HeroAdd.vue'
 import HeroEdit from './views/hero/HeroEdit.vue'
 
 import WeaponEdit from './views/weapon/WeaponEdit.vue'
-
+import WeaponAdd from './views/weapon/WeaponAdd.vue'
 
 // 创建路由对象 
 const router = new VueRouter({
@@ -27,6 +27,7 @@ const router = new VueRouter({
         { name: 'heroadd' ,path: '/hero/add' , component: HeroAdd },
         { name: 'heroedit' ,path: '/hero/edit/:id' , component: HeroEdit, props: true },
         { name: 'weaponedit' ,path: '/weapon/edit/:id' , component: WeaponEdit, props: true },
+        { name: 'weaponadd' ,path: '/weapon/add' , component: WeaponAdd },
     ]
 
 
