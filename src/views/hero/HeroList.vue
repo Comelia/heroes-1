@@ -1,7 +1,8 @@
 <template>
     <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
         <h2 class="sub-header">英雄列表</h2>
-        <a class="btn btn-success" href="add.html">Add</a>
+        <!-- <a class="btn btn-success" href="/heroadd">Add</a> -->
+        <router-link class="btn btn-success" :to="{ name: 'heroadd' }">Add</router-link>
         <div class="table-responsive">
           <table class="table table-striped">
             <thead>
@@ -37,12 +38,13 @@ export default {
     }
   },
   methods: {
+    // 请求数据
     getDate() {
       // 发送ajax请求
       this.axios
         .get('/heroes')
         .then((res) => {
-          console.log(res)
+          // console.log(res)
           const { status, data } = res;
           if ( status === 200 ) {
             // 发送请求成功 把数据给到list
