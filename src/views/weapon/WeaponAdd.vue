@@ -32,6 +32,7 @@ export default {
     } 
   },
   methods: {
+    // 添加
     addData() {
       this.axios
         .post(`/users`,this.formData)

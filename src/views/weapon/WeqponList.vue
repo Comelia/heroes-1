@@ -21,7 +21,7 @@
                 <td>
                   <router-link :to="{ name: 'weaponedit', params: { id: item.id } }">编辑</router-link>
                   &nbsp;&nbsp;
-                  <a href="javascript:window.confirm('Are you sure?')">删除</a>
+                  <a href="#" @click.prevent="delData(item.id)">删除</a>
                 </td>
               </tr>
             </tbody>
@@ -51,7 +51,24 @@ export default {
           }
         })
     },
-    
+    // 删除数据
+    delData(id) {
+      if ( !confirm('您确认删除吗?') ) {
+        return false;
+      }
+      this.axios
+        .delete('/users/'+ id)
+        .then((res) => {
+          // console.log(res)
+          // 如果删除成功 更新数据
+          if ( res.status === 200 ) {
+            this.getData()
+          }
+        })
+        .catch((err) => {
+          console.log(err)
+        })
+    }
   },
   created() {
     this.getData()
