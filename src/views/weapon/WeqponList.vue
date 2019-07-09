@@ -2,6 +2,7 @@
     <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
         <h2 class="sub-header">武器列表</h2>
         <a class="btn btn-success" href="add.html">Add</a>
+        <router-link :to="{ name: '' }"></router-link>
         <div class="table-responsive">
           <table class="table table-striped">
             <thead>
@@ -18,7 +19,7 @@
                 <td>{{ item.name }}</td>
                 <td>{{ item.skill }}</td>
                 <td>
-                  <a href="edit.html">编辑</a>
+                  <router-link :to="{ name: 'weaponedit', params: { id: item.id } }">编辑</router-link>
                   &nbsp;&nbsp;
                   <a href="javascript:window.confirm('Are you sure?')">删除</a>
                 </td>
@@ -33,6 +34,7 @@
 export default {
   data() {
     return {
+      props: ['id'],
       list: []
     }
   },
@@ -49,7 +51,7 @@ export default {
           }
         })
     },
-    // 修改数据
+    
   },
   created() {
     this.getData()
