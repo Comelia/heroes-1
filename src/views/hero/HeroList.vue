@@ -19,9 +19,10 @@
                 <td>{{ item.name }}</td>
                 <td>{{ item.gender }}</td>
                 <td>
-                  <a href="edit.html">edit</a>
+                  <!-- <a href="#">edit</a> -->
+                  <router-link :to="{ name: 'heroedit', params: { id: item.id } }">编辑</router-link>
                   &nbsp;&nbsp;
-                  <a href="javascript:window.confirm('Are you sure?')">delete</a>
+                  <a href="#" @click.prevent="delData(item.id)">删除</a>
                 </td>
               </tr>
             </tbody>
@@ -53,6 +54,23 @@ export default {
         })
         .catch((err) => {
           console.log(err);
+        })
+    },
+    // 删除数据
+    delData(id){
+      // 先确认
+      if ( !confirm('您确认删除吗?') ){
+        return false;
+      }
+      // 发送请求
+      this.axios
+        .delete(`/heroes/${id}`)
+        .then((res) => {
+          const status = res.status;
+          if ( status === 200 ) {
+            // 删除成功 更新数据
+            this.getDate()
+          }
         })
     }
   },

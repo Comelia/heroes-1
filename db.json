@@ -2,59 +2,55 @@
   "users": [
     {
       "id": 1,
-      "name": "张三1",
-      "age": 18,
-      "gender": "男"
+      "name": "佛山无影脚",
+      "skill": "踢人"
     },
     {
       "id": 2,
-      "name": "张三2",
-      "age": 18,
-      "gender": "男"
+      "name": "葵花点穴手",
+      "skill": "定"
     },
     {
       "id": 3,
-      "name": "张三3",
-      "age": 18,
-      "gender": "男"
+      "name": "九阴白骨爪",
+      "skill": "挠人"
     },
     {
       "id": 4,
-      "name": "张三4",
-      "age": 18,
-      "gender": "男"
+      "name": "如来神掌",
+      "skill": "巴掌"
     }
   ],
   "heroes": [
     {
-      "name": "花木兰",
-      "gender": "女",
-      "id": 10
-    },
-    {
-      "name": "赵云",
-      "gender": "男",
-      "id": 12
-    },
-    {
-      "name": "张飞",
-      "gender": "男",
-      "id": 13
-    },
-    {
-      "name": "关公",
-      "gender": "男",
-      "id": 14
-    },
-    {
-      "name": "赵云",
-      "gender": "男",
-      "id": 15
+      "id": 12,
+      "name": "木兰",
+      "gender": "女"
     },
     {
       "name": "甄姬",
       "gender": "女",
-      "id": 16
+      "id": 13
+    },
+    {
+      "name": "赵云",
+      "gender": "男",
+      "id": 14
+    },
+    {
+      "name": "程咬金",
+      "gender": "男",
+      "id": 15
+    },
+    {
+      "name": "关公",
+      "gender": "男",
+      "id": 18
+    },
+    {
+      "name": "妲己",
+      "gender": "女",
+      "id": 19
     }
   ]
 }

@@ -21,7 +21,6 @@ import AppSildbar from './components/AppSildbar.vue';
 
 export default {
   name: 'app',
-
   // 2.注册AppHeader组件
   components: {
     AppHeader,
